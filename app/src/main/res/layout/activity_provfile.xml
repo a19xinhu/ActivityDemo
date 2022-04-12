@@ -19,6 +19,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Signout"
-        app:layout_constraintTop_toBottomOf="@+id/provfile_label"
+        app:layout_constraintTop_toBottomOf="@+id/provfile_username"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/provfile_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/provfile_label" />
 </androidx.constraintlayout.widget.ConstraintLayout>

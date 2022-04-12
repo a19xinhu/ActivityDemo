@@ -7,10 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class ProvfileActivity extends AppCompatActivity {
 
     private Button signout;
+    private TextView usernameView;
+
     @Override
     protected void onPostResume() {
         super.onPostResume();
@@ -44,6 +47,9 @@ public class ProvfileActivity extends AppCompatActivity {
 
         String username = extras.getString("username");
         Log.d("==>","Username from intent:" + username);
+
+        usernameView = findViewById(R.id.provfile_username);
+        usernameView.setText(username);
 
         signout = findViewById(R.id.signin_button);
         signout.setOnClickListener(new View.OnClickListener() {
