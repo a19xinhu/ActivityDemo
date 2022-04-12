@@ -2,6 +2,7 @@ package com.example.activitydemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostResume() {
         super.onPostResume();
-        Log.d("==>","MainActivity started");
+        Log.d("==>","MainActivity resumed");
     }
 
     @Override
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("==>","Sign in Button clicked");
+                Intent intent = new Intent(MainActivity.this,ProvfileActivity.class);
+                startActivity(intent);
             }
         });
     }
