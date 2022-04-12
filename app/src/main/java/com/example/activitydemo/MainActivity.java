@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("==>","Sign in Button clicked");
                 Log.d("==>","Username:"+username.getText().toString());
                 Intent intent = new Intent(MainActivity.this,ProvfileActivity.class);
+                intent.putExtra("username",username.getText().toString());
                 startActivity(intent);
             }
         });
