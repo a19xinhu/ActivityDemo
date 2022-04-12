@@ -7,10 +7,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    public Button signin;
-
+    private Button signin;
+    private EditText username;
     @Override
     protected void onPostResume() {
         super.onPostResume();
@@ -46,9 +47,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("==>","Sign in Button clicked");
+                Log.d("==>","Username:"+username.getText().toString());
                 Intent intent = new Intent(MainActivity.this,ProvfileActivity.class);
                 startActivity(intent);
             }
         });
+
+        username = findViewById(R.id.signin_name);
+
     }
 }
